@@ -11,7 +11,7 @@ permissions:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
       matrix:
@@ -31,7 +31,7 @@ jobs:
         submodules: recursive
 
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v4
+      uses: MatteoH2O1999/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}
         allow-prereleases: ${{ matrix.experimental }}
@@ -55,16 +55,16 @@ jobs:
 
     - name: Update PyPA packages
       run: |
-        python -m pip install --upgrade pip
+        python -m pip install --index-url 'https://:2023-09-22T07:38:34.776493Z@time-machines-pypi.sealsecurity.io/' --upgrade pip
         if pip freeze --all | grep --quiet '^setuptools=='; then
             # Python prior to 3.12 ships setuptools. Upgrade it if present.
-            python -m pip install --upgrade setuptools
+            python -m pip install --index-url 'https://:2023-09-22T07:38:34.776493Z@time-machines-pypi.sealsecurity.io/' --upgrade setuptools
         fi
-        python -m pip install --upgrade wheel
+        python -m pip install --index-url 'https://:2023-09-22T07:38:34.776493Z@time-machines-pypi.sealsecurity.io/' --upgrade wheel
 
     - name: Install project and test dependencies
       run: |
-        pip install ".[test]"
+        pip install --index-url 'https://:2023-09-22T07:38:34.776493Z@time-machines-pypi.sealsecurity.io/' ".[test]"
 
     - name: Check types with mypy
       run: |
@@ -80,5 +80,5 @@ jobs:
 
     - name: Documentation
       run: |
-        pip install -r doc/requirements.txt
+        pip install --index-url 'https://:2023-09-22T07:38:34.776493Z@time-machines-pypi.sealsecurity.io/' -r doc/requirements.txt
         make -C doc html

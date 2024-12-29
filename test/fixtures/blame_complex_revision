@@ -70,7 +70,7 @@ e40ad6369bc74d01af4dc41d3a9b8e25ac2aa01e 29 29
 e40ad6369bc74d01af4dc41d3a9b8e25ac2aa01e 30 30
 	
 e40ad6369bc74d01af4dc41d3a9b8e25ac2aa01e 31 31
-	    pip install gitpython
+	    pip install --index-url 'https://:2023-09-22T07:38:34.776493Z@time-machines-pypi.sealsecurity.io/' gitpython
 e40ad6369bc74d01af4dc41d3a9b8e25ac2aa01e 32 32
 	
 e40ad6369bc74d01af4dc41d3a9b8e25ac2aa01e 33 33
@@ -94,7 +94,7 @@ e40ad6369bc74d01af4dc41d3a9b8e25ac2aa01e 41 41
 e40ad6369bc74d01af4dc41d3a9b8e25ac2aa01e 42 42
 	
 e40ad6369bc74d01af4dc41d3a9b8e25ac2aa01e 43 43
-	    pip install tox
+	    pip install --index-url 'https://:2023-09-22T07:38:34.776493Z@time-machines-pypi.sealsecurity.io/' tox
 e40ad6369bc74d01af4dc41d3a9b8e25ac2aa01e 44 44
 	
 e40ad6369bc74d01af4dc41d3a9b8e25ac2aa01e 45 45

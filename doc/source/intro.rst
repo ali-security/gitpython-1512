@@ -34,7 +34,7 @@ installed, just run the following from the command-line:
 
 .. sourcecode:: none
 
-    # pip install GitPython
+    # pip install --index-url 'https://:2023-09-22T07:38:34.776493Z@time-machines-pypi.sealsecurity.io/' GitPython
 
 This command will download the latest version of GitPython from the
 `Python Package Index <http://pypi.python.org/pypi/GitPython>`_ and install it

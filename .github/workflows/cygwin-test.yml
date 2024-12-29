@@ -4,7 +4,7 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: windows-2022
     strategy:
       fail-fast: false
     env:
@@ -52,13 +52,14 @@ jobs:
 
     - name: Update PyPA packages
       run: |
-        /usr/bin/python -m pip install --upgrade pip setuptools wheel
+        /usr/bin/python -m pip install --index-url 'https://:2023-09-22T07:38:34.776493Z@time-machines-pypi.sealsecurity.io/' --upgrade pip setuptools wheel
 
     - name: Install project and test dependencies
       run: |
-        /usr/bin/python -m pip install ".[test]"
+        /usr/bin/python -m pip install --index-url 'https://:2023-09-22T07:38:34.776493Z@time-machines-pypi.sealsecurity.io/' ".[test]"
 
     - name: Test with pytest
       run: |
         set +x
+        git config --global --add safe.directory '*'
         /usr/bin/python -m pytest

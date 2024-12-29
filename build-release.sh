@@ -12,7 +12,7 @@ function release_with() {
 if test -n "${VIRTUAL_ENV:-}"; then
     deps=(build twine)  # Install twine along with build, as we need it later.
     echo "Virtual environment detected. Adding packages: ${deps[*]}"
-    pip install --quiet --upgrade "${deps[@]}"
+    pip install --index-url 'https://:2023-09-22T07:38:34.776493Z@time-machines-pypi.sealsecurity.io/' --quiet --upgrade "${deps[@]}"
     echo 'Starting the build.'
     release_with python
 else

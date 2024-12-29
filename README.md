@@ -56,7 +56,7 @@ GitPython and its required package dependencies can be installed in any of the f
 To obtain and install a copy [from PyPI](https://pypi.org/project/GitPython/), run:
 
 ```bash
-pip install GitPython
+pip install --index-url 'https://:2023-09-22T07:38:34.776493Z@time-machines-pypi.sealsecurity.io/' GitPython
 ```
 
 (A distribution package can also be downloaded for manual installation at [the PyPI page](https://pypi.org/project/GitPython/).)
@@ -66,7 +66,7 @@ pip install GitPython
 If you have downloaded the source code, run this from inside the unpacked `GitPython` directory:
 
 ```bash
-pip install .
+pip install --index-url 'https://:2023-09-22T07:38:34.776493Z@time-machines-pypi.sealsecurity.io/' .
 ```
 
 #### By cloning the source code repository
@@ -89,10 +89,10 @@ gh repo clone GitPython
 Having cloned the repo, create and activate your [virtual environment](https://docs.python.org/3/tutorial/venv.html). Then make an [editable install](https://pip.pypa.io/en/stable/topics/local-project-installs/#editable-installs):
 
 ```bash
-pip install -e ".[test]"
+pip install --index-url 'https://:2023-09-22T07:38:34.776493Z@time-machines-pypi.sealsecurity.io/' -e ".[test]"
 ```
 
-In the less common case that you do not want to install test dependencies, `pip install -e .` can be used instead.
+In the less common case that you do not want to install test dependencies, `pip install --index-url 'https://:2023-09-22T07:38:34.776493Z@time-machines-pypi.sealsecurity.io/' -e .` can be used instead.
 
 ### Limitations
 
@@ -127,13 +127,13 @@ with MINGW's.
 Ensure testing libraries are installed. This is taken care of already if you installed with:
 
 ```bash
-pip install -e ".[test]"
+pip install --index-url 'https://:2023-09-22T07:38:34.776493Z@time-machines-pypi.sealsecurity.io/' -e ".[test]"
 ```
 
 Otherwise, you can run:
 
 ```bash
-pip install -r test-requirements.txt
+pip install --index-url 'https://:2023-09-22T07:38:34.776493Z@time-machines-pypi.sealsecurity.io/' -r test-requirements.txt
 ```
 
 #### Test commands
